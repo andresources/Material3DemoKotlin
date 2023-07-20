@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    tools:context=".toolbar.TopAppBarActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        app:liftOnScrollTargetViewId="@id/nv"
+
+        android:layout_height="wrap_content">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            app:titleCentered="false"
+            app:subtitleCentered="false"
+            android:elevation="4dp"
+            app:subtitle="subtitle"
+            app:navigationIconTint="?attr/colorOnSurface"
+            android:layout_width="match_parent"
+            app:menu="@menu/top_app_bar"
+            app:navigationIcon="@drawable/baseline_dehaze_24"
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/app_name"/>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <!-- Note: A RecyclerView can also be used -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+         <LinearLayout
+             android:orientation="vertical"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+             <fragment
+                 android:id="@+id/nav_host_frg"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:name="androidx.navigation.fragment.NavHostFragment"
+                 app:navGraph="@navigation/nav_graph"
+                 app:defaultNavHost="true"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toTopOf="parent" />
+         </LinearLayout>
+        <!-- Scrollable content -->
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

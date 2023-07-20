@@ -1,3 +1,13 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Material3</string>
+    <string name="edit">Edit</string>
+    <string name="content_description_search">content_description_search</string>
+    <string name="favorite">Favorite</string>
+    <string name="content_description_favorite">content_description_favorite</string>
+    <string name="more">More</string>
+    <string name="content_description_more">content_description_more</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nav_open" tools:ignore="ExtraTranslation">Open</string>
+    <string name="nav_close" tools:ignore="ExtraTranslation">Close</string>
 </resources>

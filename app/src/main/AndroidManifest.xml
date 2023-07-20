@@ -11,8 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Material3"
         tools:targetApi="31">
+
         <activity
-            android:name=".MainActivity"
+            android:name="com.material3.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.material3.bottommenu.BottomMenuActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
